@@ -2,7 +2,7 @@
   "name": "react-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ts-technology-co.github.io/",
+  "homepage": "https://ts-technology-co.github.io/home",
   "dependencies": {
     "gh-pages": "^1.0.0",
     "react": "^16.0.0",
