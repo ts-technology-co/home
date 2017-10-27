@@ -20,13 +20,6 @@ function Point(props) {
 }
 
 class App extends Component {
-  constructor(props){
-    super(props);
-    document.title = "TS-tech";
-    this.setState({
-      lan: "korean"
-    });
-  }
   onhandleShow(index) {
     this.refs[index].scrollIntoView({block: 'end', behavior: 'smooth'});
   }
