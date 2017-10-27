@@ -1,0 +1,27 @@
+{
+  "name": "react-page",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://ts-technology-co.github.io/",
+  "dependencies": {
+    "gh-pages": "^1.0.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-layout-components": "^3.0.6",
+    "react-scripts": "1.0.14",
+    "react-slick": "^0.15.4"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "babel src -d lib",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1"
+  }
+}
