@@ -10,22 +10,9 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.png/,  loader: "file-loader" },
-      { test: /\.jpeg/,  loader: "file-loader" },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: '[name]__[local]___[hash:base64:5]'
-            }
-          }
-        ]
-      },
+      { test: /\.png/,  loader: "url-loader" },
+      { test: /\.jpeg/,  loader: "url-loader" },
+      { test: /\.css$/, loader: "css-loader" },
       {
         test: /\.js$/,
         loader: 'babel-loader',
