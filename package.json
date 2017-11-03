@@ -9,13 +9,14 @@
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "react-layout-components": "^3.0.6",
+    "react-responsive": "^3.0.0",
     "react-scripts": "1.0.14",
     "react-slick": "^0.15.4",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3"
   },
   "scripts": {
-    "start": "webpack-dev-server --devtool eval-source-map --history-api-fallback --open",
+    "start": "webpack",
     "build": "webpack -p",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

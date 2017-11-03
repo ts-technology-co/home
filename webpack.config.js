@@ -1,7 +1,7 @@
 module.exports = {
   devServer: {
-    inline:true,
-    port: 3000
+    inline: true,
+    port: 8080
   },
   entry: './src/index.js',
   output: {
@@ -18,7 +18,6 @@ module.exports = {
         loader: 'babel-loader',
         exclude: /node_modules/,
         query: {
-          cacheDirectory: true,
           presets: ["env", "react"]
         }
       }

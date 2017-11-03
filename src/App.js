@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+import MediaQuery from 'react-responsive';
 import ts_logo from './assets/logo.png';
 import main from './assets/main.png';
+import map from './assets/maps.png';
 import f1 from './assets/feature1.png';
 import f2 from './assets/feature3.png';
 import f3 from './assets/feature2.png';
@@ -24,23 +26,45 @@ class App extends Component {
     this.refs[index].scrollIntoView({block: 'end', behavior: 'smooth'});
   }
 
+  renderSpec(type,hasPc,hasAndroid,Option,next) {
+    const style = hasPc ? "spec-container" : "spec-container-empty";
+    return (
+      <div className={style}>
+        <p>{type}</p>
+        <p>{hasPc}</p>
+        <p>{hasAndroid}</p>
+        <p>{Option}<br/>{next}</p>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="App">
-        <div className="body">
-          <header className="App-header">
-            <p className="logo">
-              <img src={ts_logo} className="App-logo" alt="logo" />
-            </p>
-            <p className="menu">
-              <text onClick={() => this.onhandleShow(0)} >About</text>
-              <text onClick={() => this.onhandleShow(1)} >Products</text>
-              <text onClick={() => this.onhandleShow(2)} >Contact</text>
-            </p>
-          </header>
-          <div className="App-main">
-            <img src={main} className="main-img" alt="main"/>
-            <div className="main-right">
+        <div className="App-header">
+          <div className="header-logo">
+            <img src={ts_logo} className="logo" alt="logo" />
+          </div>
+          <div className="header-space"></div>
+          <MediaQuery minDeviceWidth={700}>
+            {(matches) => {
+              if (matches) {
+                return (
+                  <div className="header-menu">
+                    <text onClick={() => this.onhandleShow(0)} >About</text>
+                    <text onClick={() => this.onhandleShow(1)} >Products</text>
+                    <text onClick={() => this.onhandleShow(2)} >Contact</text>
+                  </div>
+                );
+              } else {
+                return <div></div>;
+              }
+            }}
+          </MediaQuery>
+        </div>
+        <div className="App-main">
+          <div className="main">
+            <div className="main-half">
               <h1>Smart Touch Solution</h1>
               <h2>Multi-user experience suitable.
                 <br/>
@@ -51,74 +75,74 @@ class App extends Component {
                 <text className="button" onClick={() => this.onhandleShow(1)} >> Try Smart Touch Table</text>
               </p>
             </div>
+            <div className="main-half">
+              <img src={map} className="maps" alt="map"/>
+            </div>
           </div>
-          <div className="App-desc">
-            <div className="summary">
-              <Point title="Flexible" img={f1}/>
-              <Point title="Multi-touch" img={f2}/>
-              <Point title="Multi-OS Support" img={f3}/>
+        </div>
+        <div className="App-desc">
+          <div className="about">
+            <p><b><u>Touch-Table is</u></b></p>
+          </div>
+          <div className="summary">
+            <Point title="Flexible" img={f1}/>
+            <Point title="Multi-touch" img={f2}/>
+            <Point title="Multi-OS Support" img={f3}/>
+          </div>
+          <div ref={0} className="product">
+            <img src={main} className="product-img" alt="main"/>
+            <div className="summary-text">
+              <h2>가장 발달된 정전용량 방식의</h2>
+              <h2>터치센서기술로 만들어진</h2>
+              <h2>터치테이블입니다.</h2>
             </div>
-            <div ref={1} className="product">
-              <div className="product-container">
-                <br/><br/><br/>
-                <span className="product-text">
-                  스마트 시대에 적합한
-                </span>
-                  <br/><br/>
-                  <span className="product-text">
-                  Multi-User Experience
-                </span>
-                  <br/><br/>
-                  <span className="product-text">
-                  대화면 멀티터치 정보 공유
-                </span>
-                  <br/><br/>
-                  <span className="product-text">
-                  가장 발달된 정전용량 방식의 터치 센서 기술
-                </span>
+          </div>
+          <div className="about">
+            <p><b><u>Touch-Table Spec</u></b></p>
+          </div>
+          <div ref={1} className="product-spec">
+            <div className="product-container">
+              {this.renderSpec("","","","")}
+              {this.renderSpec("TYPE","PC","Android","Option")}
+              {this.renderSpec("터치 모니터 타입","x","x","HDMI(1), USB(1)")}
+              {this.renderSpec("저가형 타입","x","o","HDMI(1), USB(1)")}
+              {this.renderSpec("기본 타입","o","x","CPU: G4560/i3/i5/i7 선택,","Mem: 8G/16G 선택,HDMI(1)")}
+              {this.renderSpec("듀얼 타입","o","o","CPU: G4560/i3/i5/i7 선택,","Mem: 8G/16G 선택,  HDMI(1)")}
+              {this.renderSpec("","","","")}
+            </div>
+            <div className="etc">
+              <p><b>유선LAN/TV RF포함</b></p>
+              <p><b>배송 및 설치는 문의바랍니다.</b></p>
+            </div>
+            <div className="product-block">
+              <img className="product-img-1" src={p1} alt="p1"/>
+              <img className="product-img-2" src={p3} alt="p3"/>
+              <img className="product-img-3" src={p2} alt="p2"/>
+              <img className="product-img-4" src={p4} alt="p4"/>
+            </div>
+          </div>
+          <div className="about">
+            <p><b><u>Contact</u></b></p>
+          </div>
+          <div ref={2} className="contact">
+            <div className="contact-text">
+              <div className="contact-box">
+                <p>세종시 한누리대로 165, 메디피아 405</p>
+                <p>405, Medipia, 165, Hannuridaero, Sejong-si</p>
               </div>
-              <div className="product-block">
-                <img className="product-img-1" src={p1} alt="p1"/>
-                <img className="product-img-2" src={p3} alt="p3"/>
-                <img className="product-img-3" src={p2} alt="p2"/>
-                <img className="product-img-4" src={p4} alt="p4"/>
+              <div className="contact-box-2">
+                <p>TEL +82 010-2806-0031</p>
+                <p>FAX 044-863-9160</p>
+                <p>MAIL ts-technology@naver.com</p>
               </div>
             </div>
-            <div ref={0} className="about">
-              <h2>About </h2>
-              <h1>TS technology</h1>
-              <span>
-                since 2017
-              </span>
-              <br/>
-              <br/>
-              <span>
-                우리는 스마트 터치 테이블을 만듭니다.
-              </span>
-            </div>
-            <div ref={2} className="contact">
-              <h1>Contact</h1>
-              <div className="contact-text">
-                <div className="contact-box">
-                  세종시 한누리대로 165, 메디피아 405
-                </div>
-                <div className="contact-box">
-                  TEL +82 010-2806-0031
-                </div>
+            <div className="info">
+              <div className="header-logo">
+                <img src={ts_logo} className="info-logo" alt="logo" />
               </div>
-              <div className="contact-text">
-                <div className="contact-box">405, Medipia, 165, Hannuridaero, Sejong-si</div>
-                <div className="contact-box">FAX 044-863-9160</div>
+              <div className="copyright">
+                <p>© 2017 TS-technology Co ltd. All rights reserved.</p>
               </div>
-              <div className="contact-text">
-                <div className="contact-box"></div>
-                <div className="contact-box">MAIL ts-technology@naver.com</div>
-              </div>
-              <br/><br/><br/><br/>
-              <div className="contact-logo">
-                <img src={ts_logo} className="App-logo" alt="logo" />
-              </div>
-              <div>© 2017 TS-technology Co ltd. All rights reserved.</div>
             </div>
           </div>
         </div>
