@@ -46,11 +46,21 @@ class App extends Component {
             <img src={ts_logo} className="logo" alt="logo" />
           </div>
           <div className="header-space"></div>
-          <div className="header-menu">
-            <text onClick={() => this.onhandleShow(0)} >About</text>
-            <text onClick={() => this.onhandleShow(1)} >Products</text>
-            <text onClick={() => this.onhandleShow(2)} >Contact</text>
-          </div>
+          <MediaQuery minDeviceWidth={700}>
+            {(matches) => {
+              if (matches) {
+                return (
+                  <div className="header-menu">
+                    <text onClick={() => this.onhandleShow(0)} >About</text>
+                    <text onClick={() => this.onhandleShow(1)} >Products</text>
+                    <text onClick={() => this.onhandleShow(2)} >Contact</text>
+                  </div>
+                );
+              } else {
+                return <div></div>;
+              }
+            }}
+          </MediaQuery>
         </div>
         <div className="App-main">
           <div className="main">
