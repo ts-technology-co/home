@@ -46,21 +46,11 @@ class App extends Component {
             <img src={ts_logo} className="logo" alt="logo" />
           </div>
           <div className="header-space"></div>
-          <MediaQuery minDeviceWidth={700}>
-            {(matches) => {
-              if (matches) {
-                return (
-                  <div className="header-menu">
-                    <text onClick={() => this.onhandleShow(0)} >About</text>
-                    <text onClick={() => this.onhandleShow(1)} >Products</text>
-                    <text onClick={() => this.onhandleShow(2)} >Contact</text>
-                  </div>
-                );
-              } else {
-                return <div></div>;
-              }
-            }}
-          </MediaQuery>
+          <div className="header-menu">
+            <text onClick={() => this.onhandleShow(0)} >About</text>
+            <text onClick={() => this.onhandleShow(1)} >Products</text>
+            <text onClick={() => this.onhandleShow(2)} >Contact</text>
+          </div>
         </div>
         <div className="App-main">
           <div className="main">
@@ -114,12 +104,22 @@ class App extends Component {
               <p><b>유선LAN/TV RF포함</b></p>
               <p><b>배송 및 설치는 문의바랍니다.</b></p>
             </div>
-            <div className="product-block">
-              <img className="product-img-1" src={p1} alt="p1"/>
-              <img className="product-img-2" src={p3} alt="p3"/>
-              <img className="product-img-3" src={p2} alt="p2"/>
-              <img className="product-img-4" src={p4} alt="p4"/>
-            </div>
+            <MediaQuery minDeviceWidth={700}>
+              {(matches) => {
+                if (matches) {
+                  return (
+                  <div className="product-block">
+                    <img className="product-img-1" src={p1} alt="p1"/>
+                    <img className="product-img-2" src={p3} alt="p3"/>
+                    <img className="product-img-3" src={p2} alt="p2"/>
+                    <img className="product-img-4" src={p4} alt="p4"/>
+                    </div>
+                  );
+                } else {
+                  return <div></div>;
+                }
+              }}
+            </MediaQuery>
           </div>
           <div className="about">
             <p><b><u>Contact</u></b></p>

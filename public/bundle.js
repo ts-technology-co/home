@@ -21321,39 +21321,29 @@ var App = function (_Component) {
           ),
           _react2.default.createElement('div', { className: 'header-space' }),
           _react2.default.createElement(
-            _reactResponsive2.default,
-            { minDeviceWidth: 700 },
-            function (matches) {
-              if (matches) {
-                return _react2.default.createElement(
-                  'div',
-                  { className: 'header-menu' },
-                  _react2.default.createElement(
-                    'text',
-                    { onClick: function onClick() {
-                        return _this2.onhandleShow(0);
-                      } },
-                    'About'
-                  ),
-                  _react2.default.createElement(
-                    'text',
-                    { onClick: function onClick() {
-                        return _this2.onhandleShow(1);
-                      } },
-                    'Products'
-                  ),
-                  _react2.default.createElement(
-                    'text',
-                    { onClick: function onClick() {
-                        return _this2.onhandleShow(2);
-                      } },
-                    'Contact'
-                  )
-                );
-              } else {
-                return _react2.default.createElement('div', null);
-              }
-            }
+            'div',
+            { className: 'header-menu' },
+            _react2.default.createElement(
+              'text',
+              { onClick: function onClick() {
+                  return _this2.onhandleShow(0);
+                } },
+              'About'
+            ),
+            _react2.default.createElement(
+              'text',
+              { onClick: function onClick() {
+                  return _this2.onhandleShow(1);
+                } },
+              'Products'
+            ),
+            _react2.default.createElement(
+              'text',
+              { onClick: function onClick() {
+                  return _this2.onhandleShow(2);
+                } },
+              'Contact'
+            )
           )
         ),
         _react2.default.createElement(
@@ -21503,12 +21493,22 @@ var App = function (_Component) {
               )
             ),
             _react2.default.createElement(
-              'div',
-              { className: 'product-block' },
-              _react2.default.createElement('img', { className: 'product-img-1', src: _2.default, alt: 'p1' }),
-              _react2.default.createElement('img', { className: 'product-img-2', src: _6.default, alt: 'p3' }),
-              _react2.default.createElement('img', { className: 'product-img-3', src: _4.default, alt: 'p2' }),
-              _react2.default.createElement('img', { className: 'product-img-4', src: _8.default, alt: 'p4' })
+              _reactResponsive2.default,
+              { minDeviceWidth: 700 },
+              function (matches) {
+                if (matches) {
+                  return _react2.default.createElement(
+                    'div',
+                    { className: 'product-block' },
+                    _react2.default.createElement('img', { className: 'product-img-1', src: _2.default, alt: 'p1' }),
+                    _react2.default.createElement('img', { className: 'product-img-2', src: _6.default, alt: 'p3' }),
+                    _react2.default.createElement('img', { className: 'product-img-3', src: _4.default, alt: 'p2' }),
+                    _react2.default.createElement('img', { className: 'product-img-4', src: _8.default, alt: 'p4' })
+                  );
+                } else {
+                  return _react2.default.createElement('div', null);
+                }
+              }
             )
           ),
           _react2.default.createElement(
@@ -23286,7 +23286,7 @@ exports = module.exports = __webpack_require__(45)(undefined);
 
 
 // module
-exports.push([module.i, ".App {\n  text-align: center;\n  font-family: sans-serif;\n  display: flex;\n  flex-direction: column;\n  background-color: #2c3e50;\n}\n\n.App-header {\n  background-color: #FFF;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  width: 100%;\n  color: #2c3e50;\n  font-size: 1.2em;\n  padding-bottom: 2%;\n}\n.App-logo-spin {\n  animation: App-logo-spin infinite 20s linear;\n  height: 40px;\n}\n\n.header-logo {\n  flex: 30;\n  display: flex;\n  margin-top: 1%;\n  margin-left: 1%;\n}\n.header-space {\n  flex: 50;\n}\n.header-menu {\n  flex: 30;\n  display: flex;\n  margin-top: 40px;\n  justify-content: space-around;\n  align-content: flex-end;\n  margin-right: 5%;\n  width: 25%;\n  font-size: 90%;\n}\n\n.logo {\n  width: 50%;\n  height: 100%;\n}\n\n.App-main {\n  background-color: #2c3e50;\n  color: #FFFFFF;\n  padding: 5%;\n  align-items: center;\n  align-self: center;\n}\n\n.main {\n  text-align: left;\n  vertical-align: top;\n  display: flex;\n  flex-direction: row;\n}\n\n.main-half {\n\n}\n\n.maps {\n  width: 25%;\n}\n.main h1 {\n  font-weight: 200;\n  margin: 0;\n  font-size: 4vw;\n  letter-spacing: -0.5pt;\n}\n.main h2 {\n  font-weight: 200;\n  line-height: 100%;\n  margin: 10px;\n  font-size: 1.5vw;\n  letter-spacing: 0.1vw;\n}\n\n.button {\n  text-decoration: none;\n  margin: 1em 0;\n  font-size: 1.5vw;\n  font-weight: 600;\n  letter-spacing: 0em;\n  padding: 0.5em 2em;\n  border-radius: 2em;\n  display: inline-block;\n  color: #fff;\n  background-color: #046EA5;\n  transition: all 0.15s ease;\n  box-sizing: border-box;\n  border: 1px solid #046EA5;\n}\n\n.App-desc {\n  display: flex;\n  background-color: #FFFFFF;\n  flex-direction: column;\n}\n\n.product {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-left: 5%;\n  margin-right: 25%;\n}\n\n.product-right {\n  display: flex;\n  flex-direction: column;\n}\n\n.product-img {\n  width: 50%;\n  height: 50%;\n}\n\n.about {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-left: 5%;\n  margin-right: 5%;\n}\n\n.about p {\n  color: #2c3e50;\n  font-size: 2.3vw;\n}\n\n.summary {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-left: 5%;\n  margin-right: 5%;\n}\n\n.summary-text {\n  color: #046EA5;\n  text-align: left;\n  font-size: 1.5vw;\n}\n\n.point h2 {\n  color: #046EA5;\n  font-size: 2.3vw;\n  font-weight: 400;\n  margin: 0;\n  padding: 5%;\n  letter-spacing: -0.3pt;\n}\n\n.point-img {\n  width: 75%;\n}\n\n.product-spec {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  text-align: left;\n  line-height: 125%;\n  height: 550px;\n  z-index: 1;\n  opacity: 0.8;\n  background-image: url(" + __webpack_require__(46) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.product-container {\n  display: flex;\n  flex-direction: row;\n}\n\n.spec-container {\n  display: flex;\n  width: 20%;\n  margin-top: 1%;\n  background-color: #111;\n  opacity: 0.9;\n  text-align: center;\n  vertical-align: text-bottom;\n  color: #FFF;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.spec-container-empty {\n  display: flex;\n  width: 15%;\n  margin-top: 1%;\n  background-color: transparent;\n  opacity: 0.9;\n  text-align: center;\n  vertical-align: top;\n  color: #FFF;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.spec-container p {\n  font-size: 1vw;\n}\n\n.etc {\n  margin-left: 15%;\n  font-size: 1vw;\n}\n\n.product-block {\n  display: flex;\n  flex-direction: row;\n  align-items: baseline;\n  margin-left: 200px;\n  margin-right: 200px;\n  justify-content: space-around;\n}\n\n.product-img-1 {\n  width: 35%;\n  height: 35%;\n}\n\n.product-img-2 {\n  width: 20%;\n  height: 20%;\n}\n\n.product-img-3 {\n  width: 45%;\n  height: 45%;\n}\n\n.product-img-4 {\n  width: 30%;\n  height: 30%;\n}\n\n.product-text {\n  font-size: 2.0em;\n  background-color: #2c3e50;\n  color: white;\n}\n\n.desc {\n  height: 500px;\n  background: #FFF;  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to bottom, #274046, #FFF);  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to bottom, #274046, #FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n\n.contact {\n  display: flex;\n  flex-direction: column;\n  text-align: left;\n}\n\n.contact-text {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  padding-bottom: 10%;\n}\n\n.contact-box {\n  text-align: center;\n}\n\n.contact-box-2 {\n  text-align: left;\n}\n\n.info {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  background-color: #f6f6f6;\n}\n\n.info-logo {\n  width: 20%;\n  height: 100%;\n}\n\n.copyright {\n  display: inline-block;\n  vertical-align: bottom;\n}\n\n@keyframes App-logo-spin {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n", ""]);
+exports.push([module.i, ".App {\n  text-align: center;\n  font-family: sans-serif;\n  display: flex;\n  flex-direction: column;\n  background-color: #2c3e50;\n}\n\n.App-header {\n  background-color: #FFF;\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  width: 100%;\n  color: #2c3e50;\n  font-size: 1.2em;\n  padding-bottom: 2%;\n}\n.App-logo-spin {\n  animation: App-logo-spin infinite 20s linear;\n  height: 40px;\n}\n\n.header-logo {\n  flex: 30;\n  display: flex;\n  margin-top: 1%;\n  margin-left: 1%;\n}\n.header-space {\n  flex: 50;\n}\n.header-menu {\n  flex: 30;\n  display: flex;\n  margin-top: 40px;\n  justify-content: space-around;\n  align-content: flex-end;\n  margin-right: 5%;\n  width: 25%;\n  font-size: 90%;\n}\n\n.logo {\n  width: 50%;\n  height: 100%;\n}\n\n.App-main {\n  background-color: #2c3e50;\n  color: #FFFFFF;\n  padding: 5%;\n  align-items: center;\n  align-self: center;\n}\n\n.main {\n  text-align: left;\n  vertical-align: top;\n  display: flex;\n  flex-direction: row;\n}\n\n.maps {\n  width: 45%;\n}\n.main h1 {\n  font-weight: 200;\n  margin: 0;\n  font-size: 4vw;\n  letter-spacing: -0.5pt;\n}\n.main h2 {\n  font-weight: 200;\n  line-height: 100%;\n  margin: 10px;\n  font-size: 1.5vw;\n  letter-spacing: 0.1vw;\n}\n\n.button {\n  text-decoration: none;\n  margin: 1em 0;\n  font-size: 1.5vw;\n  font-weight: 600;\n  letter-spacing: 0em;\n  padding: 0.5em 2em;\n  border-radius: 2em;\n  display: inline-block;\n  color: #fff;\n  background-color: #046EA5;\n  transition: all 0.15s ease;\n  box-sizing: border-box;\n  border: 1px solid #046EA5;\n}\n\n.App-desc {\n  display: flex;\n  background-color: #FFFFFF;\n  flex-direction: column;\n}\n\n.product {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-left: 5%;\n  margin-right: 25%;\n}\n\n.product-right {\n  display: flex;\n  flex-direction: column;\n}\n\n.product-img {\n  width: 50%;\n  height: 50%;\n}\n\n.about {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-left: 5%;\n  margin-right: 5%;\n}\n\n.about p {\n  color: #2c3e50;\n  font-size: 2.3vw;\n}\n\n.summary {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-left: 5%;\n  margin-right: 5%;\n}\n\n.summary-text {\n  color: #046EA5;\n  text-align: left;\n  font-size: 1.5vw;\n}\n\n.point h2 {\n  color: #046EA5;\n  font-size: 2.3vw;\n  font-weight: 400;\n  margin: 0;\n  padding: 5%;\n  letter-spacing: -0.3pt;\n}\n\n.point-img {\n  width: 75%;\n}\n\n.product-spec {\n  display: flex;\n  flex-direction: column;\n  justify-content: space-between;\n  text-align: left;\n  line-height: 125%;\n  z-index: 1;\n  opacity: 0.8;\n  background-image: url(" + __webpack_require__(46) + ");\n  background-repeat: no-repeat;\n  background-size: cover;\n}\n\n.product-container {\n  display: flex;\n  flex-direction: row;\n}\n\n.spec-container {\n  display: flex;\n  width: 20%;\n  margin-top: 1%;\n  background-color: #111;\n  opacity: 0.9;\n  text-align: center;\n  vertical-align: text-bottom;\n  color: #FFF;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.spec-container-empty {\n  display: flex;\n  width: 15%;\n  margin-top: 1%;\n  background-color: transparent;\n  opacity: 0.9;\n  text-align: center;\n  vertical-align: top;\n  color: #FFF;\n  flex-direction: column;\n  justify-content: space-between;\n}\n\n.spec-container p {\n  font-size: 1vw;\n}\n\n.etc {\n  margin-left: 15%;\n  font-size: 1vw;\n}\n\n.product-block {\n  display: flex;\n  flex-direction: row;\n  align-items: baseline;\n  margin-left: 15%;\n  margin-right: 15%;\n  justify-content: space-around;\n}\n\n.product-img-1 {\n  width: 35%;\n  height: 35%;\n}\n\n.product-img-2 {\n  width: 20%;\n  height: 20%;\n}\n\n.product-img-3 {\n  width: 45%;\n  height: 45%;\n}\n\n.product-img-4 {\n  width: 30%;\n  height: 30%;\n}\n\n.product-text {\n  font-size: 2.0em;\n  background-color: #2c3e50;\n  color: white;\n}\n\n.desc {\n  height: 500px;\n  background: #FFF;  /* fallback for old browsers */\n  background: -webkit-linear-gradient(to bottom, #274046, #FFF);  /* Chrome 10-25, Safari 5.1-6 */\n  background: linear-gradient(to bottom, #274046, #FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */\n}\n\n.contact {\n  display: flex;\n  flex-direction: column;\n  text-align: left;\n}\n\n.contact-text {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-around;\n  padding-bottom: 10%;\n  font-size: 1.5vw;\n}\n\n.contact-box {\n  text-align: center;\n}\n\n.contact-box-2 {\n  text-align: left;\n}\n\n.info {\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  background-color: #f6f6f6;\n}\n\n.info-logo {\n  width: 20%;\n  height: 100%;\n}\n\n.copyright {\n  display: inline-block;\n  vertical-align: bottom;\n  font-size: 1vw;\n}\n\n@keyframes App-logo-spin {\n  from { transform: rotate(0deg); }\n  to { transform: rotate(360deg); }\n}\n", ""]);
 
 // exports
 

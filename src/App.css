@@ -61,12 +61,8 @@
   flex-direction: row;
 }
 
-.main-half {
-
-}
-
 .maps {
-  width: 25%;
+  width: 45%;
 }
 .main h1 {
   font-weight: 200;
@@ -168,7 +164,6 @@
   justify-content: space-between;
   text-align: left;
   line-height: 125%;
-  height: 550px;
   z-index: 1;
   opacity: 0.8;
   background-image: url('./assets/back1.jpeg');
@@ -220,8 +215,8 @@
   display: flex;
   flex-direction: row;
   align-items: baseline;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin-left: 15%;
+  margin-right: 15%;
   justify-content: space-around;
 }
 
@@ -269,6 +264,7 @@
   flex-direction: row;
   justify-content: space-around;
   padding-bottom: 10%;
+  font-size: 1.5vw;
 }
 
 .contact-box {
@@ -294,6 +290,7 @@
 .copyright {
   display: inline-block;
   vertical-align: bottom;
+  font-size: 1vw;
 }
 
 @keyframes App-logo-spin {
